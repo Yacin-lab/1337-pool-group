@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/05 19:24:14 by ybaadi            #+#    #+#             */
+/*   Updated: 2026/04/05 19:24:15 by ybaadi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 void ft_print_alphabet(void)
 {
-	int letter;
+	char letter;
 
 	letter = 'a';	// 'a' = 97 in ascii table
 	while (letter <= 'z')

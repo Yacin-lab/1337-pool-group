@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/05 19:24:18 by ybaadi            #+#    #+#             */
+/*   Updated: 2026/04/05 19:24:19 by ybaadi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 void ft_print_reverse_alphabet(void)
 {
-	int letter;
+	char letter;
 
 	letter = 'z';	// 'z' = 122 (integer) in ascii table
 	while (letter >= 'a')
