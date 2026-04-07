@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 19:24:03 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/05 19:49:20 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/07 16:42:02 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-/*int main()
+/*int	main()
 {
 	ft_putchar('a');
 

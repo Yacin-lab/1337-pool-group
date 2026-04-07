@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 19:24:38 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/05 20:49:48 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/07 16:44:48 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,9 @@ void    ft_putnbr(int nb)
     print_number(number);
 }
 
-int main()
+/*int   main()
 {
     ft_putnbr(INT_MIN);
 
     return (0);
-}
+}*/

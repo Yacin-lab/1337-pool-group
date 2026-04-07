@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 19:24:26 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/05 19:24:27 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/07 16:44:10 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void ft_is_negative(int n)
 	}
 }
 
-int main()
+/*int	main()
 {
 	ft_is_negative(0);
 	return (0);
-}
+}*/

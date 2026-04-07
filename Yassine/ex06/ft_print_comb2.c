@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 19:24:34 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/05 19:24:35 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/07 16:44:38 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ void    ft_print_comb2(void)
     }
 }
 
-int     main()
+/*int   main()
 {
 	ft_print_comb2();
 	return (0);
-}
+}*/
