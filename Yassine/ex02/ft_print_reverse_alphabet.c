@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 19:24:18 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/07 16:43:48 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/07 16:49:09 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void ft_print_reverse_alphabet(void)
 		write(1, &letter, 1);
 		letter--;
 	}
-
 }
 
 /*int	main()

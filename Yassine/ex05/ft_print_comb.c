@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 19:24:30 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/07 16:44:22 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/07 16:49:36 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void    ft_putchar(char c)
    numbers dima ykouno mkhtalfin w f tartib kbir
    (makaynach repetition b7al 111 aw 121).
 */
-void ft_print_comb(void)
+void	ft_print_comb(void)
 {
 	char i;
 	char j;

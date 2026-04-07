@@ -6,13 +6,13 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 19:24:23 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/07 16:43:59 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/07 16:49:21 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_numbers(void)
+void	ft_print_numbers(void)
 {
 	char start;
 	char end;
