@@ -1,5 +1,5 @@
 #include<unistd.h>
-//#include<stdio.h>
+#include<stdio.h>
 void ft_swap(int *a, int *b)
 {
     int temp = *a;
@@ -7,7 +7,8 @@ void ft_swap(int *a, int *b)
     *b = temp;
 }
 void ft_sort_int_tab(int *tab, int size)
-{
+{ 
+    // function katdir bubble Sort
     int i = 0;
     int j;
     while(i < size - 1)
@@ -24,7 +25,7 @@ void ft_sort_int_tab(int *tab, int size)
         i++;
     }
 }
-/*int main()
+int main()
 {
     int arr[] = {5,6,4,3,2,1};
     int size = 6;
@@ -37,4 +38,4 @@ void ft_sort_int_tab(int *tab, int size)
     }
     return 0;
 
-}*/
+}
