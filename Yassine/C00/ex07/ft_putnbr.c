@@ -42,7 +42,6 @@ void    print_number(long n)
     while(i >= 0)
     {
         ft_putchar(string[i]);
-        n /= 10;
         i--;
     }
 }
