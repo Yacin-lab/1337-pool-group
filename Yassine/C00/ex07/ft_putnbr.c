@@ -23,32 +23,46 @@ void    print_number(long n)
     // Technique: Recursion
     // if (n == 0)
     //     return;
-    // print_number(n/10);
-    // ft_putchar((n%10) + '0');
+    // print_number(n / 10);
+    // ft_putchar((n % 10) + '0');
 
     // Technique: while loop
+    // size 12 kafi lga3 lar9am (m3a '-' w '\0')
     char string[12];
     int i;
     
     i = 0;
     while(n > 0)
     {
-        string[i] = (n%10) + '0';
+        string[i++] = (n % 10) + '0';
         n /= 10;
-        i++;
     }
     
-    i--;
-    while(i >= 0)
+    while(i > 0)
     {
-        ft_putchar(string[i]);
-        i--;
+        ft_putchar(string[--i]);
     }
+
+    // Technique: Divisor
+    // int divisor = 1;
+    // Nhssbo akbar divisor (exp 1000 bach nkhrjo '1' f 1234)
+    // while (divisor <= n / 10)
+    // {
+    // 		divisor *= 10;
+    // }
+    // 
+    // while (divisor > 0)
+    // {
+    // 		ft_putchar((n / divisor) + '0');
+    // 		n %= divisor;		// Nhaydo ra9m li tprinta
+    // 		divisor /= 10;		// Nssghrou divisor
+    // }
 }
 
 void    ft_putnbr(int nb)
 {
     // range of long is larger than int
+    // Khdamna blong bach ntfadaw overflow mlli nbdlo sing dial -2147483648.
     long number = nb;      // long size = 8bytes, specifier %ld
     
     if(number == 0)
