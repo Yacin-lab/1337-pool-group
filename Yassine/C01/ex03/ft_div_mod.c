@@ -6,11 +6,10 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 18:20:04 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/07 21:30:16 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/08 19:17:19 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 //#include <stdio.h>
 
 void    ft_div_mod(int a, int b, int *div, int *mod)

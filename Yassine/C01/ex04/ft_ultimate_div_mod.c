@@ -6,11 +6,10 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 18:43:44 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/07 21:30:11 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/08 19:17:24 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 //#include <stdio.h>
 
 void    ft_ultimate_div_mod(int *a, int *b)

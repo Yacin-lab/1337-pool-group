@@ -6,11 +6,10 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 18:05:58 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/08 19:11:18 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/08 19:17:54 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 // #include <stdio.h>
 
 void    ft_rev_int_tab(int *tab, int size)

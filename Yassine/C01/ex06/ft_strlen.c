@@ -6,11 +6,10 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 17:08:16 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/08 19:11:13 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/08 19:17:44 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 // #include <stdio.h>
 
 int     ft_strlen(char *str)
