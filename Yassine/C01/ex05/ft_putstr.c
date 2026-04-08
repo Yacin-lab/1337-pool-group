@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 21:29:19 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/07 21:50:30 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/08 19:10:33 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ void    ft_putstr(char *str)
     // }
 }
 
-int     main(void)
+/*int     main(void)
 {
     ft_putstr("Hello World!\n");
     
     return (0);
-}
+}*/
