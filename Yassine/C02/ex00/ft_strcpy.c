@@ -1,0 +1,45 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/08 19:15:23 by ybaadi            #+#    #+#             */
+/*   Updated: 2026/04/08 21:25:07 by ybaadi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+// #include <stdio.h>
+
+// The strcpy() function copies a string from the source to the destination. 
+// It copies the entire string, including the null terminator.
+// Fl man strcpy, lfunction makat verifiych wach dest sghira 3la src. Ila kant 
+// src kbira, lprogram ghadi ycrash. Dakchi 3lach khass tcopier kolchi bla 
+// ma tswwel 3la size (hadi hiya function dyal [strncpy] machi strcpy).
+char    *ft_strcpy(char *dest, char *src)
+{
+    int     i;
+    
+    i = 0;
+    while (src[i])
+    {
+        dest[i] = src[i];
+        i++;
+    }
+    // darori nzido Null terminator bach nsdo string
+    dest[i] = '\0';
+    return (dest);
+}
+
+/*int     main(void)
+{
+    char src[] = "Hello";
+    char dest[20];
+
+    // Copies "Hello" to dest
+    // It returns a pointer to the dest string after copying the content from src.
+    printf("%s\n", ft_strcpy(dest, src));      // hello
+    
+    return(0);
+}*/
