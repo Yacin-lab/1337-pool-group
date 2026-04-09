@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 21:25:28 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/09 00:13:42 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/09 15:57:32 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 int     ft_str_is_alpha(char *str)
 {
-    // if string is empty return 1
-    if (!str)
-        return (1);
-    
     while (*str)
     {
         // had l'interval li kayhamni:  ***]A or Z[***and***]a or z[***

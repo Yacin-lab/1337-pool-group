@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 21:47:20 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/08 21:55:15 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/09 15:58:14 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 int     ft_str_is_numeric(char *str)
 {
-    // if string is empty return 1
-    if (!str)
-        return (1);
-    
     while (*str)
     {
         // had l'interval li kayhamni:  ***]0 or 9[***
