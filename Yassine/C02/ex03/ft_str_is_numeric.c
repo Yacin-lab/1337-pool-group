@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 21:47:20 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/10 18:28:41 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/10 18:31:21 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int     ft_str_is_numeric(char *str)
 {
     while (*str)
     {
-        // had l'interval li kayhamni:  [0*** or ***9]
+        // had l'interval li kayhamni:  [0*** and ***9]
         // 3ksto bach ila l9it character kharj 
         // l'interval li bghit yrj3 0
         
