@@ -6,11 +6,17 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 19:54:17 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/08 21:24:53 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/10 18:11:13 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
+
+// imp: strcpy() wa strncpy() makayhtamoch lsize dyal dest wach sghir wla kbir
+// lfr9 binhom:
+// - strcpy() gher katcopy bla chorot (momkin ti7 f Buffer Overflow ila kan src>dest).
+// - strncpy() katcopy but number of n (y3ni momkin ntfada buffer overflow 
+//   ila 3rft size dyal dest)
 
 // The strncpy() function is similar to strcpy(), 
 // but it copies at most n bytes from source to destination string. 

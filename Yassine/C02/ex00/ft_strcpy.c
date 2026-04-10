@@ -6,17 +6,25 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 19:15:23 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/08 21:25:07 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/10 18:08:54 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
+// imp: strcpy() wa strncpy() makayhtamoch lsize dyal dest wach sghir wla kbir
+// lfr9 binhom:
+// - strcpy() gher katcopy bla chorot (momkin ti7 f Buffer Overflow ila kan src>dest).
+// - strncpy() katcopy but number of n (y3ni momkin ntfada buffer overflow 
+//   ila 3rft size dyal dest)
+
 // The strcpy() function copies a string from the source to the destination. 
 // It copies the entire string, including the null terminator.
+
 // Fl man strcpy, lfunction makat verifiych wach dest sghira 3la src. Ila kant 
-// src kbira, lprogram ghadi ycrash. Dakchi 3lach khass tcopier kolchi bla 
-// ma tswwel 3la size (hadi hiya function dyal [strncpy] machi strcpy).
+// src kbira, lprogram ghadi ycrash (segmentation fault)
+// Dakchi 3lach khass tcopier kolchi bla ma tswwel 3la 
+// size (hadik khdma dyal [strncpy] machi strcpy).
 char    *ft_strcpy(char *dest, char *src)
 {
     int     i;

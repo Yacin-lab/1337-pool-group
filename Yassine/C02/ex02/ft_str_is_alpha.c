@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 21:25:28 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/09 15:57:32 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/10 18:31:57 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ int     ft_str_is_alpha(char *str)
 {
     while (*str)
     {
-        // had l'interval li kayhamni:  ***]A or Z[***and***]a or z[***
+        // had l'interval li kayhamni:  [***A and Z***] or [***a and z***]
+        // 3ksto bach ila l9it character kharj 
+        // l'interval li bghit yrj3 0
         
         if((*str < 'A' || *str > 'Z') && (*str < 'a' || *str > 'z'))
         {
@@ -24,6 +26,8 @@ int     ft_str_is_alpha(char *str)
         }
         str++;
     }
+
+    // ila tsalat loop y3ni mal9it hta character mn gher letters(characters)
     return (1);
 }
 
