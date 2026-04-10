@@ -1,42 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/08 21:47:20 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/10 21:25:37 by ybaadi           ###   ########.fr       */
+/*   Created: 2026/04/10 18:33:47 by ybaadi            #+#    #+#             */
+/*   Updated: 2026/04/10 21:25:20 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
-int     ft_str_is_numeric(char *str)
+int     ft_str_is_lowercase(char *str)
 {
     while (*str)
     {
-        // had l'interval li kayhamni:  [0*** and ***9]
+        // had l'interval li kayhamni:  [a... and ...z]
         // 3ksto bach ila l9it character kharj 
         // l'interval li bghit yrj3 0
         
-        if(*str < '0' || *str > '9')
+        if (*str < 'a' || *str > 'z')
         {
             return (0);
         }
         str++;
     }
     
-    // ila tsalat loop y3ni mal9it hta character mn gher numbers(characters)
+    // ila tsalat loop y3ni string kamlha lowercase
     return (1);
 }
 
 /*int     main(void)
 {
-    // char empty[1] = "";      // Allocates 1 byte, initializes as '\0'
-    // char buffer[100] = "";   // Allocates 100 bytes, first character is '\0'
 
-    printf("%d\n", ft_str_is_numeric("1247t"));
+    printf("%d\n", ft_str_is_lowercase("Aa"));
     
     return (0);
 }*/
