@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 21:29:19 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/08 19:10:33 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/10 17:14:18 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,6 @@ void    ft_putstr(char *str)
 {
     int     i;
 
-    // ila kan str kypointi 3la NULL
-    if (!str)
-    {
-        return;
-    }
     //methode 1
     i = 0;
     while(str[i] != '\0')

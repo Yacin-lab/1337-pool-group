@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 18:21:21 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/08 19:17:01 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/10 17:21:11 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,17 @@ void    ft_sort_int_tab(int *tab, int size)
 {
     int     i;
     int     j;
-    int     temp;
     int     indexMin;
 
     // Technique Selection Sort
-    indexMin = 0;
     i = 0;
     while (i < size - 1)    // ila kan size <= 1 ghaykhrj mobachara
     {
         indexMin = i;
         j = i + 1;
         while (j < size)    // bach ycompari hta akhir element
-        {
+        {   
+            // kan7tafd b index dyal minimum value
             if (tab[j] < tab[indexMin])
             {
                 indexMin = j;
@@ -44,6 +43,7 @@ void    ft_sort_int_tab(int *tab, int size)
             j++;
         }
         
+        // kahat minimum value blasto flbidaya
         ft_swap((tab + i), (tab + indexMin));
 
         i++;
