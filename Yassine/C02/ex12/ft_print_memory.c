@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 21:27:36 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/17 17:09:19 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/17 22:16:23 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,6 @@ void    *ft_print_memory(void *addr, unsigned int size)
             
             if (k % 2)
                 ft_putchar(' ');
-            k++;
         }
         
         // Step 3: print line (16 elements) as ascii characters
