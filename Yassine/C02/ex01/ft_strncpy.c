@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 19:54:17 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/10 18:11:13 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/14 22:40:23 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 // lfr9 binhom:
 // - strcpy() gher katcopy bla chorot (momkin ti7 f Buffer Overflow ila kan src>dest).
 // - strncpy() katcopy but number of n (y3ni momkin ntfada buffer overflow 
-//   ila 3rft size dyal dest)
+//   b size dyal dest)
 
 // The strncpy() function is similar to strcpy(), 
 // but it copies at most n bytes from source to destination string. 
@@ -31,30 +31,25 @@
 char    *ft_strncpy(char *dest, char *src, unsigned int n)
 {
     // bach ntfada warning dyal "comparison between signed and unsigned"
+    // w aslan fach kant3aml m3a bytes khasni unsigned int wla size_t
     unsigned int     i;
     
     i = 0;
-    // ila tsala source wla wslna 7ad size li bghit ncopy khrj
-    while (src[i] && n > 0)
+    while (i < n && src[i])
     {
         dest[i] = src[i];
-        n--;
         i++;
     }
+    
     // darori nzido Null terminator bach nsdo string
     // ila tcopat src kolha f dest wmazal n kbir 
     // nkml dakchi lib9a f dest b '\0' hta nsali n.
-    // (ila kan n < src maghatzadch '\0' f dest) 
-    while (n > 0)
+    // ila len(src) >= n maghatzadch '\0' f dest
+    while (i < n)
     {
         dest[i] = '\0';
-        n--;
         i++;
     }
-
-    // or 
-    // while(n--)
-    //     *(dest++) = '\0';
     return (dest);
 }
 
