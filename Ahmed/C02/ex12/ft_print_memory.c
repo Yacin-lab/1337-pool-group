@@ -1,5 +1,7 @@
 #include <unistd.h>
 
+// print address
+
 void	ft_print_add(unsigned long x)
 {
 	char hex[] = "0123456789abcdef";
@@ -20,33 +22,41 @@ void	ft_print_add(unsigned long x)
 	write (1, ": ", 2);
 }
 
+// print hex
+
 void	ft_char_hex(int x)
 {
 	char hex[] = "0123456789abcdef";
-	if (x > 16)
-	{
-		ft_char_hex(x / 16);
-	}
+	write (1, &hex[x / 16], 1);
 	write (1, &hex[x % 16], 1);
 }
 
 void	ft_print_hex(char *str, unsigned int size)
 {
 	unsigned int i = 0;
-	int	temp = 0;
-	while (i < size && i < 16)
+	int	temp = 1;
+	while (i < 16)
 	{
-		ft_char_hex((int)str[i]);
-		temp++;
-		if (temp == 2)
+		if (i < size)
 		{
-			write (1, " ", 1);
-			temp = 0;
+			ft_char_hex((int)str[i]);
 		}
+		else
+		{
+			write (1, "  ", 2);
+		}
+		if (temp == 2)
+                {
+                        write (1, " ", 1);
+                        temp = 0;
+                }
+		temp++;
 		i++;
 	}
-	write (1, " ", 1);
 }
+
+// print string
+
 void    ft_print_text(char *str, unsigned int size)
 {
 	unsigned int i = 0;
@@ -65,6 +75,8 @@ void    ft_print_text(char *str, unsigned int size)
 	write (1, "\n", 1);
 }
 
+// print_memory
+
 void	*ft_print_memory(void *addr, unsigned int size)
 {
 	unsigned char *ptr = (unsigned char *)addr;
@@ -82,8 +94,17 @@ void	*ft_print_memory(void *addr, unsigned int size)
 int	main()
 {
 	char str[16] = "Bonjour les amin";
-	char str2[16] = "ches\n\nest fo\n\n\n";
+	char str2[14] = "01234567891234";
+	char str3[16] = "ches...c. est fo";
+	char str4[16] = "peut faire avec.";
+	char str5[16] = "..print_memory.";
+	char str6[13] = "..lol\nlol. .";
+
 	ft_print_memory(str, sizeof(str));
 	ft_print_memory(str2, sizeof(str2));
+	ft_print_memory(str3, sizeof(str3));
+	ft_print_memory(str4, sizeof(str4));
+	ft_print_memory(str5, sizeof(str5));
+	ft_print_memory(str6, sizeof(str6));
 	return (0);
 }
