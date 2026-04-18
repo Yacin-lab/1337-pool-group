@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 21:27:36 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/17 22:16:23 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/18 18:56:55 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void    *ft_print_memory(void *addr, unsigned int size)
         daba kanpointi 3la value dyal addr li hya &str[0]. hada pointer mkhzan f 8bytes
         w drt (unsigned char *) bach nb9a nchof fdik 8bytes byte by byte
     */
-    index_of_memory = (unsigned char *)addr;       // access to address of element
+    index_of_memory = (unsigned char *)&addr;       // access to address of element
     element_of_array = addr;                        // access to element
     
     i = 0;
@@ -112,6 +112,7 @@ void    *ft_print_memory(void *addr, unsigned int size)
             
             if (k % 2)
                 ft_putchar(' ');
+            k++;
         }
         
         // Step 3: print line (16 elements) as ascii characters
@@ -146,7 +147,7 @@ int     main(void)
             "tout\tce qu on peut faire avec\t\t\n"
             "print_memory\n\n\n\tlol.lol\n ";
     
-    printf("%p\n", (s+16));
+    // printf("%p\n", (s+16));
     // printf("%c\n", *(s+16));
     
     ft_print_memory(s, sizeof(s));
