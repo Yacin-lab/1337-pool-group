@@ -22,3 +22,5 @@ bytes_of_addr = (long)add;
  - A single byte can hold a value up to FF (which is 255 in decimal).
  - The Problem with char: A standard char is typically signed, with a range only up to 127. If I read a byte containing FF using a signed char, it would cause an overflow, treating the value as -1.
  - The Result of an Overflow: This would break the logic. For example, trying to access your base array would result in base[-1 / 16], causing a crash or undefined behavior. By using unsigned, I ensure the value stays exactly between 0 and 255.
+---
+<img src="https://github.com/Yacin-lab/Uses/blob/main/img/output_print_memory.png" width="300" height="600">
