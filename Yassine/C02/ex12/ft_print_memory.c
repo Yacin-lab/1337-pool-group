@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 21:27:36 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/20 03:00:31 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/20 12:26:04 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,29 @@
 /*  
     Output format 
     [address]: [hex content] [ascii content]
-
-    Imp:
-    char str[] = "hello";
-  
-    char *ptr = str;        // ptr = &str[0]
-    
-    char **add = &ptr;      //   add = &ptr   : address of ptr.
-                            //  *add = &str[0]: address of str.
-                            // **add = str[0]
-----------------------------------------------------------------
-
+---------------------------------------------------------------------------------
+    idea:
     char str[] = "hello";
 
     void *add = str;   
     
-    char *ptr = (char *)&add;
-    // *ptr = str = &str[0]. but ghayb9a 
-    // ychof gher 1byte mn dik 8byte li mkzen fiha address &str[0]
+    long curr_addr = (long *)add;
+    unsigned char *ptrToBytesOfaddr = (unsigned char *)&curr_addr;
+    *//*
+        curr_addr = current value of address (8bytes) as a decimal number
+        but ghayb9a ychof gher 1byte mn dik 8bytes li mkhzen 
+        fiha address (&str[i])
+        
+        (dak decimal number kaytkhzan fl memory as a hexa mfar9a 3la 8bytes)
+        
+        next pointer of (e)
+        add++;
+    *//*
     
-    printf("%p\n", str);        // 0x 00 00 7f fe ea 1a 8f 42
-    printf("%p", *ptr);         // 0x 42
+    printf("%p\n", &str[0]);          // 0x 00 00 7f fe ea 1a 8f 42
+    printf("%p", *ptrToBytesOfaddr);  // 0x 42
 
------------------------------------------------------------------
+---------------------------------------------------------------------------------
     How it works:
 
     exp: &str[0]  = 00 00 7f ff a3 17 bc 02
@@ -75,7 +75,8 @@ void    ft_print_hexa(unsigned char c)
 
 void    *ft_print_memory(void *addr, unsigned int size)
 {
-    unsigned char   *index_of_memory;
+    long            start_line_addr;
+    unsigned char   *ptr_to_bytes;
     unsigned char   *element_of_array;
     int             i;
     int             k;
@@ -84,29 +85,24 @@ void    *ft_print_memory(void *addr, unsigned int size)
     {
         return (addr);
     }
-    /*
-        print addr (address of each line in array (index of memory)).
-        lpointer addr kayhaz 8bytes y3ni khasni nmtal kol 1byte b 2digits fl hexa
-        result: exp 00 00 00 01 0a 16 1f 40:
-        
-        daba kanpointi 3la value dyal addr li hya &str[0]. hada pointer mkhzan f 8bytes
-        w drt (unsigned char *) bach nb9a nchof fdik 8bytes byte by byte
-    */
-    index_of_memory = (unsigned char *)&addr;       // access to address of element
-    element_of_array = addr;                        // access to element
     
     i = 0;
     while (i < size)
     {
+        start_line_addr = (long)addr + i;
+        ptr_to_bytes = (unsigned char *)&start_line_addr;  // access to current address byte by byte
+        element_of_array = addr;
+        
         /*
-            Step 1: print address of pointer (addr) byte by byte
+            Step 1: print address of pointer (start_line_addr) byte by byte
+            lpointer addr kayhaz 8bytes y3ni khasni nmtal kol 1byte b 2digits fl hexa.
             indexing of bytes:  0--> 00 00 00 01 0a 16 1f 40 <--7
         */
-        k = sizeof(addr) - 1;
+        k = sizeof(void *) - 1;
         while (k >= 0)
         {
-            // kansift akhir byte, ft_print_hexa(decimal) ...
-            ft_print_hexa(index_of_memory[k--]);
+            // send last byte, ft_print_hexa(decimal number) ...
+            ft_print_hexa(ptr_to_bytes[k--]);
         }
         ft_putchar(':');
         ft_putchar(' ');
@@ -123,15 +119,17 @@ void    *ft_print_memory(void *addr, unsigned int size)
                 kandoz lnext condition:
                 3mmar blast kol byte b 2space 7ta nkmal 16bytes.
 
-                -> wmabin kol two bytes kandir space.
+                -> mabin kol two bytes kandir space.
             */
             if (k < size)
-                // hna kola 1byte kanmtlo b 2 digits
+                // kola 1byte kanmtlo b 2 digits
                 ft_print_hexa(element_of_array[k]);
             else
+            {
                 // else kola 1byte kanmtlo b 2 space
-                write(1, "  ", 2);
-            
+                ft_putchar(' ');
+                ft_putchar(' ');
+            }
             if (k % 2)
                 ft_putchar(' ');
             k++;
@@ -157,7 +155,6 @@ void    *ft_print_memory(void *addr, unsigned int size)
         if (i + 16 < size)
             ft_putchar('\n');
         i += 16;
-        *index_of_memory += 16;
     }
     return (addr);
 }
