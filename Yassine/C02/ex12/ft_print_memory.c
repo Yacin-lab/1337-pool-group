@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 21:27:36 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/18 18:56:55 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/20 03:00:31 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,28 @@
     
     printf("%p\n", str);        // 0x 00 00 7f fe ea 1a 8f 42
     printf("%p", *ptr);         // 0x 42
+
+-----------------------------------------------------------------
+    How it works:
+
+    exp: &str[0]  = 00 00 7f ff a3 17 bc 02
+    add = &str[0] = 00 00 7f ff a3 17 bc 02
+    
+    bytes_of_addr = add = 00 00 7f ff a3 17 bc 02
+    hna khezzant value dyal add (address of str[0]) ka number Decimal
+    had number kaytstora fi 8bytes bdabt dakchi lach drt type dyal variable
+    long bach yhez dik 8bytes kolha.
+    
+    *ptr_to_addr = bytes_of_addr = 02
+    pointer 3la value of bytes_of_addr (li hya nit l'address of &str[0])
+    but ghayb9a ychof gher 1byte mn dik 8bytes because type 
+    of ptr_to_addr is (unsigned char *)
+    
+    Imp:
+    hna sta3malt (unsigned char *) 7it kan9ra raw bytes mn memory so dak byte
+    momkin tkon fih FF li hya 255. but kon drt char li range dyalo 7tal 127
+    ila 9rit byte li fih FF ghadi yw93 over flow y3ti -1
+    donc kaywli t3bir ghalt, base[-1 / 16]
 */
 
 void	ft_putchar(char c)
