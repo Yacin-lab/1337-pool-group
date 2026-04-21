@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 19:54:17 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/14 22:40:23 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/21 23:14:17 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,9 @@ char    *ft_strncpy(char *dest, char *src, unsigned int n)
     // ila tcopat src kolha f dest wmazal n kbir 
     // nkml dakchi lib9a f dest b '\0' hta nsali n.
     // ila len(src) >= n maghatzadch '\0' f dest
+    // 7it khrejt mn loop li 9bal, 9bal mal9a '\0' f src,
+    // or btari9a khora condition li khrajtni mnha hya hadi i < n
+    // w hya nit li kayna flwhile tanya
     while (i < n)
     {
         dest[i] = '\0';
