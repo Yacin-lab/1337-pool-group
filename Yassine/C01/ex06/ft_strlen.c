@@ -6,31 +6,35 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 17:08:16 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/08 19:17:44 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/21 18:52:11 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+/*
+    NAME:
+        strlen - calculate the length of a string
+    
+    DESCRIPTION:
+        The  strlen() function calculates the length of the string pointed to by 
+        s, excluding the terminating null byte ('\0').
 
+    RETURN VALUE:
+        The strlen() function returns the number of bytes in the string pointed to by s.
+    
+    Errors:
+        In standard C, strlen doesn't check for NULL and will crash if you pass it.
+*/
 int     ft_strlen(char *str)
 {
-    int     idx;
-
-    // kantcheck wach str ktpointi 3la NULL
-    // ila kan ah nkhrj bach may3tinich Segmentation Fault
-    // 7it kan7awl nwsal lblasa makaynach f memory
-    if (!str)
-    {
-        return (-1);
-    }
+    int     index;
     
     // methode 1:
-    idx = 0;
-    while (str[idx])
+    index = 0;
+    while (str[index])
     {
-        idx++;
+        index++;
     }
-    return (idx);
+    return (index);
     
     // methode 2:
     // int count = 0;
@@ -50,7 +54,8 @@ int     ft_strlen(char *str)
     // return (ptr - str);
 }
 
-/*int main(void)
+/* #include <stdio.h>
+int main(void)
 {
 
     printf("%d\n", ft_strlen("hello")); // len = 5
