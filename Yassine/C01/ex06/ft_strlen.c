@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 17:08:16 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/21 18:52:11 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/21 22:29:46 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 */
 int     ft_strlen(char *str)
 {
-    int     index;
+    unsigned int     index;
     
     // methode 1:
     index = 0;
@@ -37,7 +37,7 @@ int     ft_strlen(char *str)
     return (index);
     
     // methode 2:
-    // int count = 0;
+    // unsigned int count = 0;
     // while (*str)
     // {
     //     str++;
