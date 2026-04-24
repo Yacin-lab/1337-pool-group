@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 19:15:23 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/10 18:08:54 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/14 12:56:57 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 // lfr9 binhom:
 // - strcpy() gher katcopy bla chorot (momkin ti7 f Buffer Overflow ila kan src>dest).
 // - strncpy() katcopy but number of n (y3ni momkin ntfada buffer overflow 
-//   ila 3rft size dyal dest)
+//   b size dyal dest)
 
 // The strcpy() function copies a string from the source to the destination. 
 // It copies the entire string, including the null terminator.
@@ -27,7 +27,7 @@
 // size (hadik khdma dyal [strncpy] machi strcpy).
 char    *ft_strcpy(char *dest, char *src)
 {
-    int     i;
+    unsigned int    i;
     
     i = 0;
     while (src[i])
