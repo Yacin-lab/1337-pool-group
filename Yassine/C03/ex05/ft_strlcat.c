@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 22:28:07 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/27 00:46:25 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/27 10:39:38 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ unsigned int    ft_strlcat(char *dest, char *src, unsigned int size)
 
     /*    
         ila kan size <= len(dest) y3ni size aslan sghar mn origin string li fdest
-        y3ni ma3ndi fin nzid chi7aja hna kaywli size = len
+        y3ni ma3ndi fin nzid chi7aja hna kaywli size = len (7it fhad size mal9itch '\0')
         fhad case standard kigoul rje3 strlen(src) + size.
     */
     if (size <= d_len)
