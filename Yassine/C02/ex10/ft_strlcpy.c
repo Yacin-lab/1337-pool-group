@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 16:01:20 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/17 18:45:24 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/04/27 00:23:44 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ unsigned int    ft_strlcpy(char *dest, char *src, unsigned int size)
     if (lenSrc < sizeDest)      
                                 
         printf("%d chars successfully copied\n", lenSrc);
-    if else (lenSrc >= sizeDest)
+    else if (lenSrc >= sizeDest)
         printf("truncation happened\n");
         
     return(0);
