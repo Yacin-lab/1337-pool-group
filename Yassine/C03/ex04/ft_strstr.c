@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 23:53:34 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/22 22:18:11 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/05/02 12:21:35 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ char *ft_strstr(char *str, char *to_find)
     i = 0;
     while (str[i])
     {
+        // reset the start of to_find
         k = 0;
         if (to_find[k] == str[i])
         {
