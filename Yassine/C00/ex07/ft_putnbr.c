@@ -6,12 +6,11 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 19:24:38 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/04/08 16:12:28 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/05/02 17:20:15 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <limits.h>
 
 void	ft_putchar(char c)
 {
@@ -25,6 +24,12 @@ void    print_number(long n)
     //     return;
     // print_number(n / 10);
     // ft_putchar((n % 10) + '0');
+    // or:
+    // if (nb > 9)
+    //   print_nb(nb / 10);
+    // c = nb % 10 + '0';
+    // ft_putchar(c);
+    // return;
 
     // Technique: while loop
     // size 12 kafi lga3 lar9am (m3a '-' w '\0')
@@ -61,11 +66,10 @@ void    print_number(long n)
 
 void    ft_putnbr(int nb)
 {
-    // range of long is larger than int
-    // Khdamna blong bach ntfadaw overflow mlli nbdlo sing dial -2147483648.
-    long number = nb;      // long size = 8bytes, specifier %ld
+    // Khdamna b unsig.. bach ntfadaw overflow mlli nbdlo sing dial -2147483648.
+    unsigned int number = (unsigned int)nb;      // unsigned int (double range of int)
     
-    if(number == 0)
+    if(nb == 0)
     {
         ft_putchar('0');
         return;
@@ -75,7 +79,7 @@ void    ft_putnbr(int nb)
     // ila 7waltha lpositive ghatwli 2147483648
     // w had number ma3ndich f type int
     // INT_MAX = 2147483647
-    if(number < 0)
+    if(nb < 0)
     {
         number *= -1;
         ft_putchar('-');
@@ -83,7 +87,9 @@ void    ft_putnbr(int nb)
     print_number(number);
 }
 
-/*int   main()
+/*
+#include <limits.h>
+int   main()
 {
     ft_putnbr(INT_MIN);
 
