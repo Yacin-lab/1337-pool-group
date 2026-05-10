@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 10:46:46 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/05/05 13:28:46 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/05/06 09:19:14 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,7 +133,7 @@ void    ft_putnbr_base(int nbr, char *base)
     }   
 }
 
-
+/*
 #include <stdio.h>
 #include <limits.h>
 int     main(void) {
@@ -159,3 +159,4 @@ int     main(void) {
 
     return (0);
 }
+*/
