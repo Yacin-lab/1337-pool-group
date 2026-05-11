@@ -6,7 +6,7 @@
 /*   By: ybaadi <ybaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 18:18:21 by ybaadi            #+#    #+#             */
-/*   Updated: 2026/05/09 18:18:25 by ybaadi           ###   ########.fr       */
+/*   Updated: 2026/05/11 13:01:06 by ybaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void ft_puzzle(int clm, int *box, int size, int *count)
   while (row < size)
   {
     /*
-      search of safe row in current column
+      search of safe row in current column (level)
       In comparison of all previous columns
       otherwise move to the next row
     */
